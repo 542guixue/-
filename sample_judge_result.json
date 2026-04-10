@@ -1,0 +1,77 @@
+{
+  "candidate_id": "candidate_0106",
+  "assessment_id": "asm_demo_0001",
+  "allowed_ability_ids": [
+    "ability_0002",
+    "ability_0003",
+    "ability_0004",
+    "ability_0005",
+    "ability_0009",
+    "ability_0018"
+  ],
+  "judge_result": {
+    "vector_updates": [
+      {
+        "ability_id": "ability_0002",
+        "score": 0.93,
+        "evidence_ref": "battle:checkpoint:cp_2",
+        "support_level": "direct"
+      },
+      {
+        "ability_id": "ability_0003",
+        "score": 0.91,
+        "evidence_ref": "battle:error_log:evt_17",
+        "support_level": "direct"
+      },
+      {
+        "ability_id": "ability_0004",
+        "score": 0.88,
+        "evidence_ref": "battle:checkpoint:cp_3",
+        "support_level": "direct"
+      },
+      {
+        "ability_id": "ability_0005",
+        "score": 0.76,
+        "evidence_ref": "battle:test_report:tr_04",
+        "support_level": "indirect"
+      },
+      {
+        "ability_id": "ability_0009",
+        "score": 0.67,
+        "evidence_ref": "battle:answer:ans_06",
+        "support_level": "indirect"
+      },
+      {
+        "ability_id": "ability_0018",
+        "score": 0.72,
+        "evidence_ref": "battle:checkpoint:cp_4",
+        "support_level": "indirect"
+      }
+    ],
+    "verified_skills": [
+      "Golang",
+      "Redis",
+      "Distributed Locking",
+      "Deadlock Debugging",
+      "PostgreSQL",
+      "System Design"
+    ],
+    "reranker_payload": "Resolved Redis lock contention under concurrent order writes, identified deadlock path from test failures, proposed rollback-safe mitigation, and narrowed PostgreSQL evidence to operationally plausible choices. Strength is in backend runtime decisions under pressure; residual risk is rollback completeness.",
+    "combat_confidence": 0.82,
+    "score_coverage": 0.83,
+    "evidence_refs": [
+      "battle:checkpoint:cp_2",
+      "battle:error_log:evt_17",
+      "battle:checkpoint:cp_3",
+      "battle:test_report:tr_04",
+      "battle:answer:ans_06",
+      "battle:checkpoint:cp_4"
+    ],
+    "risk_flags": [
+      "rollback_gap",
+      "partial_observability"
+    ]
+  },
+  "trace_id": "trace_demo_assessment",
+  "version": "judge.v1"
+}

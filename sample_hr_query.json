@@ -1,0 +1,12 @@
+{
+  "query_text": "需要一个能在高并发下处理 Redis 分布式锁和死锁的 Golang 后端",
+  "filters": {
+    "city": "上海",
+    "remote_policy": "onsite",
+    "min_years_experience": 3
+  },
+  "top_k": 3,
+  "rerank_top_n": 8,
+  "trace_id": "trace_demo_search",
+  "version": "session5.mock.v1"
+}

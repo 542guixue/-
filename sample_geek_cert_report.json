@@ -1,0 +1,165 @@
+{
+  "report_id": "rpt_demo_0001",
+  "candidate": {
+    "candidate_id": "candidate_0106",
+    "display_name": "GoRedis_106",
+    "city": "上海",
+    "years_experience": 8.4
+  },
+  "role": {
+    "role_schema_id": "role_schema_go_redis_l9",
+    "role_name": "高级 Golang / Redis 后端",
+    "mode": "sandbox"
+  },
+  "assessment": {
+    "assessment_id": "asm_demo_0001",
+    "status": "CERTIFIED",
+    "started_at": "2026-04-10T09:00:00Z",
+    "ended_at": "2026-04-10T09:43:00Z",
+    "time_budget_minutes": 45
+  },
+  "combat_summary": {
+    "scenario_title": "订单核心链路中的 Redis 锁竞争与回滚压力战役",
+    "summary": "候选人在高并发订单写入场景中完成锁冲突定位、死锁路径解释与补救方案设计；强项在运行时问题收敛，风险在回滚闭环仍需补证。",
+    "checkpoint_count": 4,
+    "injection_count": 2,
+    "fallback_used": false
+  },
+  "radar_metrics": [
+    {
+      "metric_id": "ability_0002",
+      "label": "Golang",
+      "score": 0.93,
+      "weight": 0.2,
+      "layer": 1024
+    },
+    {
+      "metric_id": "ability_0003",
+      "label": "Redis",
+      "score": 0.91,
+      "weight": 0.2,
+      "layer": 1024
+    },
+    {
+      "metric_id": "ability_0004",
+      "label": "Distributed Locking",
+      "score": 0.88,
+      "weight": 0.2,
+      "layer": 1024
+    },
+    {
+      "metric_id": "family_cache_and_storage",
+      "label": "Cache & Storage Family",
+      "score": 0.84,
+      "weight": 0.2,
+      "layer": 128
+    },
+    {
+      "metric_id": "macro_backend_and_concurrency",
+      "label": "Backend & Concurrency",
+      "score": 0.9,
+      "weight": 0.2,
+      "layer": 32
+    }
+  ],
+  "verified_skills": [
+    "Golang",
+    "Redis",
+    "Distributed Locking",
+    "Deadlock Debugging",
+    "PostgreSQL",
+    "System Design"
+  ],
+  "vector_signature": {
+    "vec_version": "vec.publish.v1",
+    "signature_method": "top_atoms_plus_layer_coverage",
+    "top_atoms": [
+      {
+        "ability_id": "ability_0002",
+        "score": 0.93
+      },
+      {
+        "ability_id": "ability_0003",
+        "score": 0.91
+      },
+      {
+        "ability_id": "ability_0004",
+        "score": 0.88
+      }
+    ],
+    "layer_coverage": {
+      "coverage_32": 0.92,
+      "coverage_128": 0.85,
+      "coverage_1024": 0.78
+    }
+  },
+  "anti_forgery": {
+    "trace_id": "trace_demo_assessment",
+    "report_digest": "sha256:report_demo_0001",
+    "judge_digest": "sha256:judge_demo_0001",
+    "vec_version": "vec.publish.v1",
+    "prompt_version": "battlefield.v1+judge.v1",
+    "grader_version": "judge.v1",
+    "issued_at": "2026-04-10T09:43:10Z"
+  },
+  "evidence_slices": [
+    {
+      "evidence_id": "ev_001",
+      "source_type": "checkpoint",
+      "source_ref": "battle:checkpoint:cp_2",
+      "summary": "在 checkpoint 2 中定位出锁竞争热点，并给出针对性收敛方案。",
+      "related_ability_ids": [
+        "ability_0002",
+        "ability_0003",
+        "ability_0004"
+      ],
+      "confidence": 0.91
+    },
+    {
+      "evidence_id": "ev_002",
+      "source_type": "error_log",
+      "source_ref": "battle:error_log:evt_17",
+      "summary": "从 error log 识别 Redis 锁冲突与请求堆积关系。",
+      "related_ability_ids": [
+        "ability_0003",
+        "ability_0005"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "evidence_id": "ev_003",
+      "source_type": "test_report",
+      "source_ref": "battle:test_report:tr_04",
+      "summary": "测试报告暴露死锁复现路径，候选人解释了隔离与回滚权衡。",
+      "related_ability_ids": [
+        "ability_0004",
+        "ability_0005",
+        "ability_0018"
+      ],
+      "confidence": 0.82
+    },
+    {
+      "evidence_id": "ev_004",
+      "source_type": "answer",
+      "source_ref": "battle:answer:ans_06",
+      "summary": "回答中给出 PostgreSQL 相关兜底策略，但回滚闭环仍有补证空间。",
+      "related_ability_ids": [
+        "ability_0009",
+        "ability_0018"
+      ],
+      "confidence": 0.71
+    }
+  ],
+  "risk_flags": [
+    "rollback_gap",
+    "partial_observability"
+  ],
+  "final_recommendation": {
+    "decision": "yes",
+    "rationale": "高并发后端主线证据扎实，关键运行时问题能稳定收敛；剩余风险集中在回滚完备性，不足以否决。",
+    "next_action": "进入更高强度的 rollback / consistency 深水区战役，补齐回滚链路证据。"
+  },
+  "trace_id": "trace_demo_assessment",
+  "schema_version": "geek_cert_report.v1",
+  "created_at": "2026-04-10T09:43:15Z"
+}
