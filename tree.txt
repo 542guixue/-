@@ -1,0 +1,35 @@
+.
+├── README.md
+├── SESSION6_HANDOFF_MANIFEST.md
+├── app
+│   ├── mock_data.py
+│   ├── mock_rpc.py
+│   └── search_pipeline.py
+├── docs
+│   ├── 00_master_execution_spec.md
+│   ├── 01_shared_contracts.md
+│   ├── 02_agent_workflow_fsm.md
+│   ├── 03_data_model_notes.md
+│   ├── 04_search_pipeline_notes.md
+│   └── 05_repo_walkthrough.md
+├── examples
+│   ├── sample_geek_cert_report.json
+│   ├── sample_hr_query.json
+│   └── sample_judge_result.json
+├── prompts
+│   ├── battlefield_agent.system.md
+│   ├── ingestion_agent.system.md
+│   ├── oracle_judge_agent.system.md
+│   └── xrag_agent.system.md
+├── run_demo.sh
+├── schemas
+│   ├── geek_cert_report.schema.json
+│   └── judge_result.schema.json
+├── sql
+│   └── 001_core_tables.sql
+├── tests
+│   ├── test_rrf.py
+│   └── test_search_pipeline.py
+├── tree.txt
+└── workflow
+    └── orchestrator_flow.py
